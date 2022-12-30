@@ -14,13 +14,13 @@ let amount = Number(e.target.amount.value);
 
 function createPromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
-  const objectPromise = { position, delay };
+  const promise = { position, delay };
 
   return new Promise((resolve, reject) => {
     if (shouldResolve) {
-      resolve(objectPromise);
+      resolve(promise);
     }
-    reject(objectPromise);
+    reject(promise);
   });
 }
 
